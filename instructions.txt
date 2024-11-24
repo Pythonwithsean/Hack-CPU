@@ -1,0 +1,62 @@
+--- COMP557 in-class test 2 ---
+
+Edit the three asm files according to the instructions below:
+
+ict2/q1/Nand.asm
+ict2/q2/Add3.asm
+ict2/q3/multplusone.asm
+
+Do not edit or create other files (generated files are OK to leave in place).
+
+Use the Assembler and CPU Emulator in the ict2/tools directory to test your chips.
+
+Once you have completed the three questions, compress the entire ict2 directory and submit it to Moodle.
+To compress on Windows: right-click the folder, select 'Send to', and then select 'Compressed (zipped) folder'.
+To compress on Mac: right-click the folder, select 'Compress "ict2"'.
+
+Please submit 35 minutes after you start.
+Students with ILPs should stick to the following times:
+adding 25% is about 44 minutes,
+adding 33% is about 47 minutes,
+adding 50% is about 50 minutes.
+In each case, I will allow a grace period.
+
+
+--- ict2/q1/Nand.asm [4 marks] ---
+
+Write an assembly program that takes the contents of memory cell 0 and memory cell 1, calculates bitwise Nand of these two numbers, and stores the result in memory cell 2.
+
+Nand has inputs 'a','b', output 'out', and the following truth table:
+
+|   a   |   b   |  out  |
+|   0   |   0   |   0   |
+|   0   |   1   |   0   |
+|   1   |   0   |   0   |
+|   1   |   1   |   1   |
+
+The assembly language has A instructions that set the A register, like this:
+
+@2
+
+and it has C instructions that compute, write registers and/or memory, and then conditionally jump, like this:
+
+MD = M-1; JLE
+
+Nand.asm is already started for you: the two operands have been moved into memory cell 2 and the D register, and the A register is set to 2.
+
+
+--- ict2/q2/Add3.asm [4 marks] ---
+
+Add the numbers given in memory cells 0, 1 and 2 and record their sum in memory cell 3.
+
+
+--- ict2/q3/square.asm [2 marks] ---
+
+Square the number given in memory cell 0 and record it in memory cell 1.
+
+
+--- How it is marked ---
+
+Each program will be run against a hidden test script.
+If the submitted program passes all tests then it is awarded full marks.
+If not, it may get zero marks (make sure to test your programs!).
